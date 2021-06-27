@@ -1,0 +1,13 @@
+heroku:
+    stage: deploy
+    only:
+        - master
+    script:
+        - "chmod 775 *.sh"
+        - "sed -i -e 's/\r$//' git-ci-report.sh"
+        - "./git-ci-report.sh start"
+        - "apt-get update -qy"
+        - "apt-get install -y ruby-dev"
+        - gem install dpl
+        - dpl --provider=heroku --app=gold-squid-gitlab --api-key=ac2c4092-b6df-465c-8542-d454f1944903
+        - "./git-ci-report.sh ok"

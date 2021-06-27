@@ -1,0 +1,4 @@
+database:
+  username: vrarbsbxpwdloc
+  password: 615cc709e2e802cbbbc5ac92492086036bec6deb9d7067d6e55a2649fa9e5643
+  jdbcUrl: jdbc:postgresql://ec2-54-228-99-58.eu-west-1.compute.amazonaws.com:5432/d47i0bpj2fu09c
